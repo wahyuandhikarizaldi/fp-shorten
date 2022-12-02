@@ -14,10 +14,12 @@
     "flowbite": "^1.5.4",
     "pinia": "^2.0.26",
     "prettier": "^2.8.0",
+    "sweetalert2": "^11.6.15",
     "vue": "^3.2.45",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {
+    "@iconify/vue": "^4.0.1",
     "@vitejs/plugin-vue": "^3.2.0",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.19",
