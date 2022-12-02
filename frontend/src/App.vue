@@ -99,30 +99,46 @@
               <li>
                 <RouterLink
                   to="/"
-                  class="block py-2 pl-3 pr-4 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
+                  :class="{
+                    'md:text-blue-700': $route.path == '/',
+                    'md:text-gray-700': $route.path != '/',
+                  }"
+                  class="block py-2 pl-3 pr-4 text-white rounded md:bg-transparent md:p-0 dark:text-white"
                   aria-current="page"
                   >Home</RouterLink
                 >
               </li>
               <li>
                 <RouterLink
+                  to="/list"
+                  :class="{
+                    'md:text-blue-700': $route.path == '/list',
+                    'md:text-gray-700': $route.path != '/list',
+                  }"
+                  class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  >List</RouterLink
+                >
+              </li>
+              <li>
+                <RouterLink
                   to="/login"
-                  class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  :class="{
+                    'md:text-blue-700': $route.path == '/login',
+                    'md:text-gray-700': $route.path != '/login',
+                  }"
+                  class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >Login</RouterLink
                 >
               </li>
               <li>
                 <RouterLink
                   to="/regis"
-                  class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
+                  :class="{
+                    'md:text-blue-700': $route.path == '/regis',
+                    'md:text-gray-700': $route.path != '/regis',
+                  }"
+                  class="block py-2 pl-3 pr-4 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
                   >Register</RouterLink
-                >
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-                  >Pricing</a
                 >
               </li>
             </ul>
