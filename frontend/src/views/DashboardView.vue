@@ -8,7 +8,6 @@
           <th scope="col" class="py-3 px-6">Link</th>
           <th scope="col" class="py-3 px-6">Day</th>
           <th scope="col" class="py-3 px-6">Month</th>
-          <th scope="col" class="py-3 px-6">Price</th>
           <th scope="col" class="py-3 px-6">
             <span class="sr-only">Edit | Delete</span>
           </th>
@@ -26,7 +25,6 @@
           </th>
           <td class="py-4 px-6">Sliver</td>
           <td class="py-4 px-6">Laptop</td>
-          <td class="py-4 px-6">$2999</td>
           <td class="py-4 px-6 text-right flex justify-around">
             <a
               @click="store.EditLink()"
@@ -53,7 +51,6 @@
           </th>
           <td class="py-4 px-6">White</td>
           <td class="py-4 px-6">Laptop PC</td>
-          <td class="py-4 px-6">$1999</td>
           <td class="py-4 px-6 text-right flex justify-around">
             <a
               @click="store.EditLink()"
