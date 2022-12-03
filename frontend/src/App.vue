@@ -32,6 +32,11 @@
               class="z-999 my-4 text-base list-none bg-white divide-y divide-gray-100 rounded shadow dark:bg-gray-700 dark:divide-gray-600"
               id="user-dropdown"
               :class="{ hidden: settings.user_settings == false }"
+              @focusout="
+                {
+                  hidden;
+                }
+              "
             >
               <div class="px-4 py-3">
                 <span class="block text-sm text-gray-900 dark:text-white"
@@ -161,27 +166,26 @@
       <RouterLink to="/">Home</RouterLink>
       <RouterLink to="/about">About</RouterLink>
     </nav> -->
-    <div class="mx-8 mt-5">
+    <div class="mx-12 mt-5">
       <RouterView />
-      <!-- <DashboardView /> -->
     </div>
   </div>
 </template>
 
 <script>
 import { Icon } from "@iconify/vue";
-import DashboardView from "./views/DashboardView.vue";
-import { useSettings } from "./stores/index.js";
+import { useSettings, useStore } from "./stores/index.js";
 
 export default {
   components: {
     Icon,
-    DashboardView,
   },
   setup() {
     const settings = useSettings();
+    const store = useStore();
     return {
       settings,
+      store,
     };
   },
 };
