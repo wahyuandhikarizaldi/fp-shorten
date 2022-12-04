@@ -14,10 +14,10 @@ export const useApp = defineStore({
     loading: false,
     error: null,
   }),
-  getters: {
-    isAuthenticated: computed(() => !!this.user),
-  },
   actions: {
+    async sessionCheck() {
+      console.log('cookie : ' + document.cookie);
+    },
     async login(email, password) {
       this.loading = true;
       this.error = null;
@@ -101,16 +101,17 @@ export const useApp = defineStore({
   },
 });
 
-export const useStore = defineStore({
-  id: "Store",
+export const useView = defineStore({
+  id: "View",
   state: () => ({
+    user_settings: false,
     use_custom_link: false,
   }),
   actions: {
-    UseCustomLink() {
+    useCustomLink() {
       this.use_custom_link = !this.use_custom_link;
     },
-    DeleteLink() {
+    deleteLink() {
       Swal.fire({
         title: "Are you sure?",
         text: "You won't be able to revert this!",
@@ -125,7 +126,7 @@ export const useStore = defineStore({
         }
       });
     },
-    EditLink() {
+    editLink() {
       Swal.fire({
         title: "Edit Link",
         input: "text",
@@ -148,7 +149,7 @@ export const useStore = defineStore({
         }
       });
     },
-    async NewLink() {
+    async newLink() {
       const { value: formValues } = await Swal.fire({
         title: "Add New Short Link",
         html: `
@@ -246,16 +247,6 @@ export const useStore = defineStore({
         Swal.fire(JSON.stringify(formValues));
       }
     },
-  },
-  getters: {},
-});
-
-export const useSettings = defineStore({
-  id: "Settings",
-  state: () => ({
-    user_settings: false,
-  }),
-  actions: {
     toggleUserSettings() {
       this.user_settings = !this.user_settings;
       console.log(this.user_settings);

@@ -1,5 +1,5 @@
 <template>
-  <div @click="store.NewLink()">
+  <div @click="view.newLink()">
     <button
       class="shadow-md rounded-lg w-fit p-2 bg-slate-100 hover:bg-slate-200"
     >
@@ -10,16 +10,16 @@
 
 <script>
 import { Icon } from "@iconify/vue";
-import { useStore } from "../stores/index.js";
+import { useView } from "../stores/index.js";
 
 export default {
   components: {
     Icon,
   },
   setup() {
-    const store = useStore();
+    const view = useView();
     return {
-      store,
+      view,
     };
   },
 };

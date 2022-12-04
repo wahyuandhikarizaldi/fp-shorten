@@ -57,13 +57,13 @@
             <td class="py-4 px-6">Laptop</td>
             <td class="py-4 px-6 text-right flex justify-around">
               <a
-                @click="store.EditLink()"
+                @click="view.editLink()"
                 href="#"
                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                 >Edit</a
               >
               <a
-                @click="store.DeleteLink()"
+                @click="view.deleteLink()"
                 href="#"
                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                 >Delete</a
@@ -84,13 +84,13 @@
             <td class="py-4 px-6">Laptop PC</td>
             <td class="py-4 px-6 text-right flex justify-around">
               <a
-                @click="store.EditLink()"
+                @click="view.editLink()"
                 href="#"
                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                 >Edit</a
               >
               <a
-                @click="store.DeleteLink()"
+                @click="view.deleteLink()"
                 href="#"
                 class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
                 >Delete</a
@@ -107,14 +107,14 @@
 </template>
 
 <script>
-import { useStore } from "../stores/index.js";
+import { useView } from "../stores/index.js";
 import AddToggle from "../components/AddToggle.vue";
 
 export default {
   setup() {
-    const store = useStore();
+    const view = useView();
     return {
-      store,
+      view,
     };
   },
   components: {

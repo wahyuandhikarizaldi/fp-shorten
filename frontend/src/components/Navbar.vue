@@ -34,7 +34,7 @@
 
 <script>
 import { Icon } from "@iconify/vue";
-import { useApp, useSettings, useStore } from "../stores/index.js";
+import { useApp, useView } from "../stores/index.js";
 import { RouterLink, RouterView } from "vue-router";
 
 export default {
@@ -43,13 +43,11 @@ export default {
     Icon,
   },
   setup() {
-    const settings = useSettings();
     const app = useApp();
-    const store = useStore();
+    const view = useView();
     return {
       app,
-      settings,
-      store,
+      view,
     };
   },
 };
