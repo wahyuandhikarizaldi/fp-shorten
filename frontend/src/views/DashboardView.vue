@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="overflow-x-auto relative shadow-md sm:rounded-lg">
+      <h1>Dashboard</h1>
       <table class="w-full text-sm text-left text-gray-500 dark:text-gray-400">
         <thead
           class="text-xs text-gray-700 uppercase bg-gray-100 dark:bg-gray-700 dark:text-gray-400"
@@ -107,15 +108,22 @@
 </template>
 
 <script>
-import { useView } from "../stores/index.js";
+import { useApp, useView } from "../stores/index.js";
 import AddToggle from "../components/AddToggle.vue";
 
 export default {
   setup() {
     const view = useView();
+    const app = useApp();
     return {
+      app,
       view,
     };
+  },
+  created() {
+    if (this.app.user.logged_in === false) {
+      this.$router.push("/login");
+    }
   },
   components: {
     AddToggle,
