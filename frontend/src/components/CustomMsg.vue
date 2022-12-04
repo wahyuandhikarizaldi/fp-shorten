@@ -36,7 +36,7 @@
         Use&nbsp;
         <p
           class="hover:text-blue-500 hover:underline cursor-pointer"
-          @click="store.UseCustomLink()"
+          @click="store.useCustomLink()"
         >
           Custom Link
         </p>
@@ -79,15 +79,13 @@
 </template>
 
 <script>
-import { useSettings, useStore } from "../stores/index.js";
+import { useView } from "../stores/index.js";
 
 export default {
   setup() {
-    const settings = useSettings();
-    const store = useStore();
+    const view = useView();
     return {
-      settings,
-      store,
+      view,
     };
   },
 };
