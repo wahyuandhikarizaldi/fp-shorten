@@ -4,9 +4,9 @@
   </div>
 </template>
 <script>
-import { useApp } from './stores';
+import { useApp } from "./stores";
 export default {
-  name: 'App',
+  name: "App",
   setup() {
     const app = useApp();
     return {

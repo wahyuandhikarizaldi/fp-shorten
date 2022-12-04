@@ -8,16 +8,15 @@ const URL_API = "http://localhost:3000/";
 export const useApp = defineStore({
   id: "App",
   state: () => ({
-    user: null,
+    user: {
+      logged_in: false,
+    },
     token: null,
     refreshToken: null,
     loading: false,
     error: null,
   }),
   actions: {
-    async sessionCheck() {
-      console.log('cookie : ' + document.cookie);
-    },
     async login(email, password) {
       this.loading = true;
       this.error = null;
@@ -51,6 +50,7 @@ export const useApp = defineStore({
       } finally {
         this.loading = false;
       }
+      this.router.push("/dashboard");
     },
     async register(email, password, cpassword) {
       this.loading = true;
@@ -92,11 +92,34 @@ export const useApp = defineStore({
       } finally {
         this.loading = false;
       }
+      this.router.push("/dashboard");
     },
     async logout() {
       this.user = null;
       this.token = null;
       this.refreshToken = null;
+    },
+    async sessionCheck() {
+      // Todo: Check if token is valid
+      const token = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("token="))
+        ?.split("=")[1];
+
+      const refreshToken = document.cookie
+        .split("; ")
+        .find((row) => row.startsWith("refreshToken="))
+        ?.split("=")[1];
+
+      console.log("token : " + token);
+      console.log("refreshToken : " + refreshToken);
+
+      if (token && refreshToken) {
+        this.user.logged_in = true;
+        console.log("logged_in : " + this.user.logged_in);
+        return true;
+      }
+      return false;
     },
   },
 });

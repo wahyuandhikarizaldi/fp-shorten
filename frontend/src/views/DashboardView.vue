@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import { useView } from "../stores/index.js";
+import { useApp, useView } from "../stores/index.js";
 import AddToggle from "../components/AddToggle.vue";
 import Sidebar from "../components/Sidebar.vue";
 import NavDashboard from "../components/NavDashboard.vue";
@@ -17,9 +17,16 @@ import NavDashboard from "../components/NavDashboard.vue";
 export default {
   setup() {
     const view = useView();
+    const app = useApp();
     return {
+      app,
       view,
     };
+  },
+  created() {
+    if (this.app.user.logged_in === false) {
+      this.$router.push("/login");
+    }
   },
   components: {
     AddToggle,
