@@ -48,7 +48,6 @@ export const useApp = defineStore({
       } catch (error) {
         this.error = error;
       } finally {
-        console.log(this.router);
         this.router.push("/dashboard");
         this.loading = false;
       }

@@ -13,7 +13,7 @@ export default {
       app,
     };
   },
-  created() {
+  beforeMount() {
     this.app.sessionCheck();
   },
 };

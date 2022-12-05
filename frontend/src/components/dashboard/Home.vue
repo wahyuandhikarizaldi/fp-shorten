@@ -2,6 +2,7 @@
   <div
     class="w-full ml-24 mr-5 mb-9 my-7 rounded-lg bg-neutral-900 px-7 py-6 h-fit"
   >
+    <p>Hai, Yuni</p>
     <h1 class="text-4xl font-bold text-neutral-50">Dashboard</h1>
     <div class="grid grid-cols-2 w-full">
       <div class="grid grid-cols-2 grid-rows-4 w-full mt-7 gap-6">

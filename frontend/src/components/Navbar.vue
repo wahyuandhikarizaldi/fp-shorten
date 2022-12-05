@@ -6,13 +6,13 @@
       >
         <a href="/" class="flex items-center">
           <Icon
-            icon="mdi:link-variant"
+            icon="majesticons:comet"
             width="30"
             class="mr-1 text-yellow-100"
           ></Icon>
           <span
             class="font-black text-yellow-100 self-center text-xl whitespace-nowrap dark:text-white"
-            >SHLINK</span
+            >ShortIT</span
           >
         </a>
         <div class="flex items-center lg:order-2">

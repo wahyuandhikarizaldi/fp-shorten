@@ -14,18 +14,23 @@
               Make your long links into short just in one click, and share it
               with your friends. It's that simple!
             </p>
-            <div class="flex space-x-4">
+            <div class="flex">
               <input
                 type="url"
                 id="url"
-                class="w-full bg-neutral-700 border-0 rounded-lg focus:outline-0 focus:ring-0 font-medium"
+                class="w-full bg-neutral-700 text-white border-0 rounded-l-lg focus:outline-0 focus:ring-0 font-medium"
                 autocomplete="off"
+                placeholder="Place your link here!"
               />
               <button
                 type="submit"
-                class="bg-green-500 text-slate-50 p-3 font-bold rounded-lg w-32"
+                class="bg-green-500 text-slate-50 p-3 font-bold rounded-r-lg"
               >
-                Short it!
+              <Icon
+              icon="majesticons:comet"
+              width="30"
+              class="text-white"
+            ></Icon>
               </button>
             </div>
           </div>
@@ -38,11 +43,13 @@
   </div>
 </template>
 <script>
+import { Icon } from "@iconify/vue";
 import NavbarVue from "../components/Navbar.vue";
 export default {
   name: "HomeView",
   components: {
     NavbarVue,
+    Icon,
   },
 };
 </script>
