@@ -52,7 +52,6 @@ export const useApp = defineStore({
         this.router.push("/dashboard");
         this.loading = false;
       }
-      
     },
     async register(email, password, cpassword) {
       this.loading = true;

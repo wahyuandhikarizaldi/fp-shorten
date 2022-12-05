@@ -2,9 +2,7 @@
   <div class="grid grid-cols-12 grid-rows-8">
     <Sidebar class="col-span-2 row-span-full" />
     <NavDashboard title="Tautan" class="col-span-10 row-span-1" />
-    <div class="col-span-10 row-span-7">
-      Tautan
-    </div>
+    <div class="col-span-10 row-span-7">Tautan</div>
   </div>
 </template>
 

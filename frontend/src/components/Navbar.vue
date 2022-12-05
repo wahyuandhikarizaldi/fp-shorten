@@ -5,7 +5,11 @@
         class="container flex flex-wrap items-center justify-between mx-auto"
       >
         <a href="/" class="flex items-center">
-          <Icon icon="mdi:link-variant" width="30" class="mr-1 text-yellow-100"></Icon>
+          <Icon
+            icon="mdi:link-variant"
+            width="30"
+            class="mr-1 text-yellow-100"
+          ></Icon>
           <span
             class="font-black text-yellow-100 self-center text-xl whitespace-nowrap dark:text-white"
             >SHLINK</span

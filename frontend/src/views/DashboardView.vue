@@ -32,7 +32,7 @@ export default {
     Icon,
     AddToggle,
     Sidebar,
-    HomeDashboard
+    HomeDashboard,
   },
 };
 </script>

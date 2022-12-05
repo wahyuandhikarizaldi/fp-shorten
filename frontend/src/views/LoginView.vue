@@ -8,7 +8,11 @@
       >
         <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
           <RouterLink to="/" class="flex items-center justify-center">
-            <Icon icon="mdi:link-variant" width="30" class="mr-1 text-yellow-100"></Icon>
+            <Icon
+              icon="mdi:link-variant"
+              width="30"
+              class="mr-1 text-yellow-100"
+            ></Icon>
             <h1
               class="self-center text-xl font-black text-yellow-100 whitespace-nowrap dark:text-white"
             >
