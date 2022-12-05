@@ -48,9 +48,11 @@ export const useApp = defineStore({
       } catch (error) {
         this.error = error;
       } finally {
+        console.log(this.router);
+        this.router.push("/dashboard");
         this.loading = false;
       }
-      this.router.push("/dashboard");
+      
     },
     async register(email, password, cpassword) {
       this.loading = true;

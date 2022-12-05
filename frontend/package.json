@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "axios": "^1.2.0",
+    "chart.js": "^4.0.1",
     "firebase": "^9.14.0",
     "flowbite": "^1.5.4",
     "pinia": "^2.0.26",
     "prettier": "^2.8.0",
-    "sweetalert2": "^11.6.15",
+    "sweetalert2": "^11.4.8",
     "vue": "^3.2.45",
+    "vue-chartjs": "^4.1.2",
     "vue-router": "^4.1.6"
   },
   "devDependencies": {

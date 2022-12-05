@@ -1,18 +1,18 @@
 <template>
-  <div class="grid grid-cols-12 grid-rows-8">
-    <Sidebar class="col-span-2 row-span-full" />
-    <NavDashboard title="Dashboard" class="col-span-10 row-span-1" />
-    <div class="col-span-10 row-span-7">
-      Dashboard
-    </div>
+  <div class="w-full h-screen bg-black flex text-neutral-50">
+    <!-- Sidebar -->
+    <Sidebar />
+    <RouterView />
   </div>
 </template>
 
 <script>
+import { Icon } from "@iconify/vue";
 import { useApp, useView } from "../stores/index.js";
 import AddToggle from "../components/AddToggle.vue";
-import Sidebar from "../components/Sidebar.vue";
-import NavDashboard from "../components/NavDashboard.vue";
+import Sidebar from "../components/dashboard/Sidebar.vue";
+// import NavDashboard from "../components/NavDashboard.vue";
+import HomeDashboard from "../components/dashboard/Home.vue";
 
 export default {
   setup() {
@@ -29,9 +29,10 @@ export default {
     }
   },
   components: {
+    Icon,
     AddToggle,
     Sidebar,
-    NavDashboard,
+    HomeDashboard
   },
 };
 </script>

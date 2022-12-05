@@ -1,35 +1,35 @@
 <template>
-  <div class="my-3 mx-28">
-    <nav class="bg-white px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
+  <div class="mx-10 my-3">
+    <nav class="bg-black px-2 sm:px-4 py-2.5 rounded dark:bg-gray-900">
       <div
         class="container flex flex-wrap items-center justify-between mx-auto"
       >
         <a href="/" class="flex items-center">
-          <Icon icon="mdi:link-variant" width="30" class="mr-1"></Icon>
+          <Icon icon="mdi:link-variant" width="30" class="mr-1 text-yellow-100"></Icon>
           <span
-            class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
-            >S.link</span
+            class="font-black text-yellow-100 self-center text-xl whitespace-nowrap dark:text-white"
+            >SHLINK</span
           >
         </a>
         <div class="flex items-center lg:order-2">
           <RouterLink to="/login" v-show="app.user.logged_in === false">
             <a
               href="#"
-              class="text-gray-800 dark:text-white hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+              class="text-white font-bold dark:text-white hover:bg-neutral-700 focus:ring-4 focus:ring-gray-300 rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
               >Log in</a
             >
           </RouterLink>
           <RouterLink to="/register" v-show="app.user.logged_in === false">
             <a
               href="#"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              class="text-black bg-white hover:bg-neutral-500 focus:ring-4 focus:ring-neutral-300 font-bold rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
               >Register</a
             >
           </RouterLink>
           <RouterLink to="/dashboard" v-show="app.user.logged_in === true">
             <a
               href="#"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+              class="text-black bg-white hover:bg-neutral-500 focus:ring-4 focus:ring-neutral-300 font-bold rounded-lg text-sm px-4 lg:px-5 py-2 lg:py-2.5 mr-2 focus:outline-none"
               >Dashboard</a
             >
           </RouterLink>

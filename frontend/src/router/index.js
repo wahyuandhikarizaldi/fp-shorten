@@ -13,17 +13,29 @@ const router = createRouter({
       path: "/dashboard",
       name: "dashboard",
       component: () => import("../views/DashboardView.vue"),
+      children: [
+        {
+          path: "",
+          name: "dashboardhome",
+          component: () => import("../components/dashboard/Home.vue"),
+        },
+        {
+          path: "links",
+          name: "links",
+          component: () => import("../components/dashboard/Links.vue"),
+        },
+        {
+          path: "settings",
+          name: "settings",
+          component: () => import("../components/dashboard/Settings.vue"),
+        }
+      ]
     },
-    {
-      path: "/dashboard/links",
-      name: "links",
-      component: () => import("../views/LinkView.vue"),
-    },
-    {
-      path: "/dashboard/settings",
-      name: "settings",
-      component: () => import("../views/PengaturanView.vue"),
-    },
+    // {
+    //   path: "/dashboard/settings",
+    //   name: "settings",
+    //   component: () => import("../views/PengaturanView.vue"),
+    // },
     {
       path: "/register",
       name: "register",
