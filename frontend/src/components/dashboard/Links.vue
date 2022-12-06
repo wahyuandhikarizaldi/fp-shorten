@@ -5,14 +5,15 @@
     <h1 class="text-4xl font-bold text-neutral-50">Your Links</h1>
     <div class="mt-8 space-y-3">
       <div class="bg-neutral-800 rounded-lg w-2/3 flex items-center mb-9">
-        <input type="url" name="url" id="url" class="rounded-lg w-full bg-neutral-800 border-0 focus:outline-none focus:ring-0" placeholder="Place your link here!">
+        <input type="url" name="url" id="url" class="rounded-lg w-full bg-neutral-800 border-0 focus:outline-none focus:ring-0" placeholder="Place your link here!" autocomplete="off">
         <button type="submit" class="bg-green-400 p-3 rounded-r-lg w-24 hover:bg-green-500 font-bold">
           Short it!
         </button>
       </div>
       <div class="p-5 bg-neutral-800 rounded-lg w-2/3">
         <div class="flex relative">
-          <h1 class="font-medium text-2xl hover:underline text-yellow-200 cursor-pointer">Sh.link/B3uz4</h1>
+          <h1 class="font-medium text-2xl hover:underline text-yellow-200 cursor-pointer">S.it/B3uz4</h1>
+            <Icon icon="carbon:copy" width="20" class="ml-1 cursor-pointer hover:text-yellow-200"></Icon>
           <div
             class="bg-neutral-700 px-1.5 py-1 rounded-md ml-3 absolute right-0 flex justify-center items-center space-x-1 cursor-pointer hover:bg-neutral-600"
           >
@@ -33,9 +34,9 @@
             <Icon
               icon="material-symbols:nest-clock-farsight-analog-outline-rounded"
               width="20"
-              class="text-neutral-50"
+              class="text-neutral-500"
             ></Icon>
-            <h1 class="text-neutral-50">05 December 2022 05:07</h1>
+            <h1 class="text-neutral-500">05 December 2022 05:07</h1>
           </div>
           <div class="absolute right-0">
             <div class="flex items-center space-x-2">
