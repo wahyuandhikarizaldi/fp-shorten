@@ -9,7 +9,7 @@ export const useApp = defineStore({
   id: "App",
   state: () => ({
     user: {
-      logged_in: false,
+      logged_in: true,
     },
     token: null,
     refreshToken: null,
@@ -22,7 +22,7 @@ export const useApp = defineStore({
       this.error = null;
       try {
         const { data } = await axios
-          .post(URL_API + "login", {
+          .post(URL_API, {
             email,
             password,
           })
@@ -64,6 +64,7 @@ export const useApp = defineStore({
             cpassword,
           })
           .then((res) => {
+            console.log(email, password, cpassword);
             document.cookie = `token=${
               res.data.token
             }; path=/; expires=${new Date(
@@ -74,14 +75,18 @@ export const useApp = defineStore({
             }; path=/; expires=${new Date(
               res.data.expirationTime
             ).toUTCString()}`;
+            this.router.push("/");
           })
           .catch((error) => {
             // Todo: Handle error
-            console.log(error.response.data.message);
+            console.log(error.response.data.message.code);
+            console.log(email, password, cpassword);
             if (
               error.response.data.message.code === "auth/email-already-in-use"
             ) {
-              alert("Email already in use");
+              let alert_2 = document.querySelector("#alert_2");
+              alert_2.classList.remove("d-none");
+              alert_2.innerHTML = "Email already in use !";
             }
           });
         this.user = data.user;
@@ -91,8 +96,9 @@ export const useApp = defineStore({
         this.error = error;
       } finally {
         this.loading = false;
+        
       }
-      this.router.push("/dashboard");
+      
     },
     async logout() {
       this.user = null;

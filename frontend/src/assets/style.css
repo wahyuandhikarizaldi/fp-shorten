@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+    background: rgb(17,34,51);
+    background: linear-gradient(257deg, rgba(17,34,51,1) 33%, rgba(0,32,98,1) 84%);
+    background-image: url(../public/galaxy.jpg);
+    
+}

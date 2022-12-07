@@ -1,4 +1,4 @@
-import { auth, db } from './config/firebase.js';
+import { auth } from './config/firebase.js';
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
 import express from 'express';
 import cors from 'cors';
@@ -11,11 +11,11 @@ app.use(bodyParser.json());
 app.use(morgan());
 const port = 3000;
 
-app.get('/', (req, res) => {
+app.get('/hello', (req, res) => {
     res.send('Hello World!');
 });
 
-app.post('/login', (req, res) => {
+app.post('/', (req, res) => {
     const { email, password } = req.body;
     
     try {
@@ -41,10 +41,6 @@ app.post('/login', (req, res) => {
 
 app.post('/register', (req, res) => {
     const { email, password, cpassword } = req.body;
-
-    if(password !== cpassword) {
-        return res.status(400).json({ error: "Passwords don't match" });
-    }
 
     try {
         createUserWithEmailAndPassword(auth, email, password).then((userCredential) => {
